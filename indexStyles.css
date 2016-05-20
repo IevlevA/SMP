@@ -1,0 +1,34 @@
+.container {
+    width: 30%;
+}
+
+#loginError, #passError, #passRepError {
+	margin: 2px;
+	color: red;
+	margin-bottom: 15px;
+	position: relative;
+	text-align: left;
+}
+
+#title {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+#loginWords {
+	text-align: center;
+	font-family: cursive;
+	color: gray;
+}
+
+#btnSignIn {
+	margin-bottom: 3px;
+}
+
+#regWords {
+	text-align: center;
+	font-family: cursive;
+	color: gray;
+}
