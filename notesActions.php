@@ -42,5 +42,5 @@ if($_POST['aim'] == "drawNotes") {
 if($_POST['aim'] == "deleteAll") {
 	$collection -> remove(array('id' => $_COOKIE['id']), array ('justOne' => false));
 }
-
+ 
 ?>
