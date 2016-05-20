@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notes</title>
+    <meta charset="utf-8">
+    <script src="notes.js"></script>
+    <link rel="icon" type="image/jpg" href="image/favicon.jpg">
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css/notesStyles.css' type='text/css' media='all'>
+    <link rel="stylesheet" type="text/css" href="css/notesStyles.css" media="all">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="Draw()">
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      	<div class="container">
+        	<div id="navbar" class="collapse navbar-collapse">
+          		<ul class="nav navbar-nav">
+            		<li class="active"><a href="#" >Main Page</a></li>
+            		<li data-toggle = "modal" data-target = "#form"><a href="#">Add Note</a></li>
+            		<li onclick="DeleteAll()"><a href="#">Delete All Notes</a></li>
+            		<li onclick="Logout()"><a href="#" id="logoutLink">Log Out</a></li>
+          		</ul>
+        	</div>
+      	</div>
+    </nav>
+
+	<div class="modal fade" id="form" tabindex="-1" role="dialog">
+    	<div class="modal-dialog">
+      		<div class="modal-content" id = "form2">
+        		<div class="modal-header">
+          			<button class="close" data-dismiss = "modal">X</button>
+          			<h2 class="modal-title text-center" id="headerForm">Create note</h2>
+        		</div>
+        		<div class="modal-body">
+          			<input type="text" id="noteTitle" class="form-control input-lg" maxlength="20" placeholder = "Enter the title of the note">
+          			<textarea class="form-control input-lg" id="descr" maxlength = "2000" placeholder = "Enter the description of the note"></textarea>
+          			<p id = "errorCreation"></p>
+        		</div>
+        		<div class="modal-footer">
+          			<button class="btn btn-warning btn-lg" id="createBtn" onclick="AddNote()">Create</button>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+
+	<div class="modal fade" id="formEdit" tabindex="-1" role="dialog">
+    	<div class="modal-dialog">
+      		<div class="modal-content" id = "form2Edit">
+        		<div class="modal-header">
+          			<button class="close" data-dismiss = "modal">X</button>
+          			<h2 class="modal-title text-center" id="headerForm">Edit note</h2>
+        		</div>
+        		<div class="modal-body">
+          			<input type="text" id="noteTitleEdit" class="form-control input-lg" maxlength="30" placeholder = "Enter the title of the note">
+          			<textarea class="form-control input-lg" id="descrEdit" maxlength = "2000" placeholder = "Enter the  description of the note"></textarea>
+          			<p id = "errorCreationEdit"></p>
+        		</div>
+        		<div class="modal-footer">
+          			<button class="btn btn-warning btn-lg" id="editBtn" onclick="EditNote()">Change</button>
+        		</div>
+      		</div>
+   		</div>
+  	</div>
+
+    <div id="noteCollection">
+   		<!-- Структура заметки
+  		<div id="noteCreated" class="panel panel-primary">
+			<div id="noteTitleCreated" class="panel-heading text-center">First_Note
+				<div id="deleteNoteCreated"></div>
+  				<div id="editNoteCreated"></div>
+			</div>
+			<textarea id="noteDescriptionCreated" readonly maxlength = "2000" class="panel-body">This is my first note on this site!)</textarea>
+		</div> -->
+  	</div>
+</body>
+
+</html>
